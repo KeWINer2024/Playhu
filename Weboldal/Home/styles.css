@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --primary: #1e1f26;
+  --neon: #39ff14;
+  --purple: #8a2be2;
+}
+
+body {
+  background-color: var(--primary);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #8a2be2;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  margin: 20px auto;
+  width: fit-content;
+  margin-left: 20px;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+
+.card {
+  position: relative;
+  color: var(--neon);
+  height: 250px;
+  width: calc(33.33% - 10px); /* 3 cards per row with margin */
+  margin: 5px;
+  
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden; /* Hide any overflow from overlay */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Overlay styling */
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.5); /* Gray with 50% opacity */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+  z-index: 1; /* Ensure the overlay is on top of the background image */
+  pointer-events: none; /* Allow mouse events to pass through the overlay */
+}
+
+.card:hover .overlay {
+  opacity: 0.2; /* Fade the overlay when mouse is over the card */
+}
+
+.card p {
+  position: relative;
+  color: var(--neon);
+  margin: 0;
+  z-index: 2; /* Ensure the text is on top of the overlay */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/*Hamburger*/
+
+header {
+  position: fixed; /* Fix pozicionálás, hogy mindig a viewportban legyen */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary);
+    color: var(--neon);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: transform 0.3s ease-in-out; 
+    z-index: 1000;
+    
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above other content */
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--neon);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--primary);
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  margin: 0;
+  z-index: 1000;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu.show {
+  display: flex;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  color: var(--neon);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--purple);
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Hide hamburger menu on larger screens */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin: 0 15px;
+  }
+
+  .menu a {
+    font-size: 18px;
+  }
+}

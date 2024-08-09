@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --primary: #1e1f26;
+    --neon: #39ff14;
+    --purple: #8a2be2;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--neon);
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow to avoid scroll */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--primary);
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--neon);
+}
+
+.menu {
+    display: none;
+    background: var(--primary);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: var(--neon);
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.menu a:hover {
+    background: var(--purple);
+}
+
+.container {
+    background: #282c34;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.form-section {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 30px); /* Adjust for icon */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #1e1f26;
+    color: var(--neon);
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.form-group input::placeholder {
+    color: #555;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--purple);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #7a1fa1;
+}
+
+#login-message {
+    color: var(--neon);
+    font-size: 16px;
+}

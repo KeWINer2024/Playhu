@@ -1,0 +1,171 @@
+/* Alap stílusok */
+:root {
+    --primary: #1e1f26; /* Alap háttér szín */
+    --neon: #39ff14; /* Neon zöld */
+    --purple: #8a2be2; /* Lila */
+    --light-gray: #f0f0f0; /* Világosszürke, a háttérszínhez */
+    --modal-background: rgba(0, 0, 0, 0.7); /* Modal háttér szín */
+}
+
+/* Általános stílusok */
+body {
+    background-color: var(--primary);
+    color: var(--neon);
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header stílusok */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary);
+    color: var(--neon);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--purple);
+    font-size: 50px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: var(--neon);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Fő tartalom stílusok */
+main {
+    margin-top: 80px; /* Margin-top, hogy a header ne takarja el a tartalmat */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Regisztrációs űrlap */
+.container {
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    color: var(--purple);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--neon);
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--neon);
+    border-radius: 5px;
+    background-color: var(--light-gray);
+    color: var(--primary);
+}
+
+input:focus {
+    border-color: var(--purple);
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--purple);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a1a8b;
+}
+
+/* Modal stílusok */
+.modal {
+    display: none; /* Alapértelmezett állapot: rejtett */
+    position: fixed;
+    z-index: 1000; /* A modal a legfelső réteg */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-background); /* Átlátszó fekete háttér */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--primary);
+    margin: 10% auto; /* Középre igazítva */
+    padding: 20px;
+    border: 1px solid var(--neon);
+    width: 80%; /* Szélesség a képernyőn */
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.close {
+    color: var(--neon);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--purple);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Visszaszámláló stílusok */
+.countdown {
+    font-size: 24px;
+    margin-top: 20px;
+    color: var(--neon);
+}

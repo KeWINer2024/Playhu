@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<body>
+    <header>
+        <h1>PlayHub</h1>
+        <nav>
+            <a href="../Home/Home.html">Home</a>
+            <a href="../Login/login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Register</h2>
+            <form id="registrationForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" >
+                <button id="submit" type="submit">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal for registration success--> 
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Registration Successful!</h2>
+            <p>You will be redirected to the home page shortly.</p>
+            <div class="countdown" id="countdown">Redirecting in 4 seconds...</div>
+        </div>
+    </div>
+    
+    <script type="module" src="regiszter.js" defer></script>
+    
+</body>
+
+</html>
